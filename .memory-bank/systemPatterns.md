@@ -1,12 +1,12 @@
-# System Patterns
+# Systemmuster
 
-## Architectural style
+## Architekturstil
 
-See the `architecture:` snapshot in `AGENTS.md` — the only home of structure facts. This file
-holds the *why*: decisions and patterns.
+Der `architecture:`-Schnappschuss in [AGENTS.md](../AGENTS.md) ist die einzige Quelle für Strukturfakten. Dieses Dokument hält Entscheidungen und ihre Gründe fest.
 
-## Key decisions
-- TBD — each entry: decision · date · source link (spec, plan or commit)
+## Schlüsselentscheidungen
+- Onion Architecture trennt Domäne, Anwendungsfälle, technische Adapter und HTTP-Schnittstelle; Abhängigkeiten zeigen nach innen. · 2026-09-28 · [Architekturschnappschuss](../AGENTS.md) · provenance: human (`/sdd-setup`, origin: stated, confirmedAt: 2026-09-28)
+- `src/server.js` startet den Prozess, während `src/app.js` die ohne Netzwerk-Port testbare Express-Anwendung erstellt. · 2026-09-28 · [Architekturschnappschuss](../AGENTS.md) · provenance: human (`/sdd-setup`, origin: suggested, confirmedAt: 2026-09-28)
 
-## Patterns
-- TBD
+## Muster
+- Noch keine implementierten Muster; die geplanten Grenzen werden bei der ersten Umsetzung verifiziert.
