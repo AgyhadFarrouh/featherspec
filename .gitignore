@@ -3,6 +3,9 @@
 CLAUDE.local.md
 .github/copilot/settings.local.json
 
+# Installed npm dependencies
+node_modules/
+
 # Volatile deep-scan working state — deleting it loses nothing curated
 .sdd-scan/
 

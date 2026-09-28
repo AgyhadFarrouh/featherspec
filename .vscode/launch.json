@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Tip Splitter",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/server.js",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PORT": "3000"
+      },
+      "console": "integratedTerminal",
+      "restart": true,
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    }
+  ]
+}

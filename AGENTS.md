@@ -96,13 +96,12 @@ the user had typed it (its body lives in `.claude/commands/sdd-architecture-upda
 architecture:
   style: 'Onion Architecture'
   entrypoints:
-    - 'geplant: src/server.js — startet den HTTP-Prozess'
-    - 'geplant: src/app.js — erstellt die testbare Express-Anwendung'
+    - 'src/server.js — startet den HTTP-Prozess'
+    - 'src/app.js — erstellt die testbare Express-Anwendung'
   modules:
-    - 'geplant: src/domain/ — reine Fachregeln ohne äußere Abhängigkeiten'
-    - 'geplant: src/application/ — orchestriert Anwendungsfälle'
-    - 'geplant: src/infrastructure/ — enthält technische Adapter'
-    - 'geplant: src/interfaces/http/ — enthält Express-Routen und HTTP-Übersetzung'
+    - 'src/domain/ — reine Fachregeln ohne äußere Abhängigkeiten'
+    - 'src/application/ — orchestriert Anwendungsfälle'
+    - 'src/interfaces/http/ — enthält Express-Routen und HTTP-Übersetzung'
   shared: []
   boundaries:
     - 'Abhängigkeiten zeigen nach innen zur Domäne.'

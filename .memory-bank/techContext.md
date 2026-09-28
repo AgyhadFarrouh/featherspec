@@ -10,7 +10,9 @@
 ## Build / Ausführung
 - Abhängigkeiten installieren: `npm install`
 - HTTP-Service starten: `npm start`
-- Geplante Prozesseinstiegspunkte: `src/server.js` und `src/app.js`
+- Prozesseinstiegspunkt: `src/server.js`
+- Portfrei testbare Anwendung: `src/app.js` mit `createApp()`
+- VS Code: `Debug Tip Splitter` starts `src/server.js` on port 3000; workspace tasks expose start, test, and lint commands.
 
 ## Test
 - Unit- und Integrationstests ausführen: `npm test`
@@ -27,5 +29,6 @@ Beide Befehle müssen ohne Warnungen und Fehler enden.
 ## Randbedingungen
 - Die Anwendung folgt Onion Architecture; Abhängigkeiten zeigen zur Domäne nach innen.
 - Express bleibt auf die HTTP-Schnittstellenschicht begrenzt.
-- Noch existiert kein Anwendungsmanifest; Skripte und Abhängigkeiten werden in T-001 der ersten Implementierung angelegt.
+- Geldwerte werden intern als Centwerte mit `BigInt` berechnet und an der HTTP-Grenze als Dezimalstrings formatiert.
+- Der Anwendungsservice aggregiert Validierungsfehler, bevor die Domain aufgerufen wird.
 - In der lokalen Windows-PowerShell müssen npm und npx wegen der Ausführungsrichtlinie über `npm.cmd` und `npx.cmd` aufgerufen werden.

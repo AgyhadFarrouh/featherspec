@@ -1,7 +1,7 @@
 # Faire Aufteilung einer Restaurantrechnung
 
-**Status:** Draft
-**Plan:** [0001-tip-berechnung.plan.md](0001-tip-berechnung.plan.md)
+**Status:** Implemented
+**Plan:** [0001-tip-berechnung.2026-09-28.plan.md](../plan-archive/0001-tip-berechnung.2026-09-28.plan.md)
 
 ## 1. Zusammenfassung
 
@@ -150,3 +150,7 @@ Die Umsetzung ist abgeschlossen, wenn alle Anforderungen und Akzeptanzkriterien 
 
 1. Die Spezifikation mit `/sdd-clarify` auf Widersprüche, versteckte Lücken und Prüfbarkeit untersuchen.
 2. Danach mit `/sdd-plan` einen kleinen, verifizierbaren Implementierungsplan erstellen.
+
+## Plan history
+
+- 2026-09-28 — [0001-tip-berechnung.2026-09-28.plan.md](../plan-archive/0001-tip-berechnung.2026-09-28.plan.md) — Cent-genaue Rechnungsaufteilung und HTTP-Schnittstelle mit 16 bestandenen Tests implementiert.

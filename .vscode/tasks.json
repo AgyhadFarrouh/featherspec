@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Tip Splitter",
+      "type": "shell",
+      "command": "npm.cmd start",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test Tip Splitter",
+      "type": "shell",
+      "command": "npm.cmd test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint Tip Splitter",
+      "type": "shell",
+      "command": "npx.cmd eslint . --max-warnings=0",
+      "problemMatcher": []
+    }
+  ]
+}
