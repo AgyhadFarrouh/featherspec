@@ -24,7 +24,7 @@ globs mirror the rules' `paths:` globs. On divergence this file wins.
 ## Repository Settings (managed by /sdd-setup and /sdd-featherspec-update)
 
 ```yaml
-DocLanguage: English # template default until /sdd-setup asks; governs docs and dialogue, wiring stays English.
+DocLanguage: Deutsch # template default until /sdd-setup asks; governs docs and dialogue, wiring stays English.
 FeatherSpecVersion: 1.9.0 # managed by /sdd-featherspec-update; do not edit by hand
 IssueTracker: none # none | github | jira | <other> — set by /sdd-setup
 ```
@@ -77,7 +77,10 @@ invariants allow none.
 ### Current preferences
 
 - **Comments**: Do not add comments in generated code unless explicitly requested.
+- **Naming**: Avoid abbreviations in variable and parameter names.
 - **Formatting**: Follow the project's formatter / linter configuration when present.
+- **Quality gate (code)**: After every completed implementation step, run the Definition-of-Green commands from `.memory-bank/techContext.md` and fix the code until they report zero warnings and errors. This applies only to implementation steps, never specify, clarify, plan, or documentation-only work.
+- **TDD**: For new behaviour, write a failing test through a `Not implemented` stub first; stop after every new or changed test for user confirmation before implementing. Immediately green tests against existing code are allowed, with a negative control where cheap.
 
 ## Architecture & Design Snapshot (MUST SYNC)
 
@@ -89,15 +92,21 @@ run the `/sdd-architecture-update` workflow yourself, in the same change set, ex
 the user had typed it (its body lives in `.claude/commands/sdd-architecture-update.md`).
 
 ```yaml
-# last reconciled: never · last deep scan: never
+# last reconciled: 2026-09-28 · last deep scan: never
 architecture:
-  style: 'TBD'
+  style: 'Onion Architecture'
   entrypoints:
-    - 'TBD'
-  modules: []
+    - 'geplant: src/server.js — startet den HTTP-Prozess'
+    - 'geplant: src/app.js — erstellt die testbare Express-Anwendung'
+  modules:
+    - 'geplant: src/domain/ — reine Fachregeln ohne äußere Abhängigkeiten'
+    - 'geplant: src/application/ — orchestriert Anwendungsfälle'
+    - 'geplant: src/infrastructure/ — enthält technische Adapter'
+    - 'geplant: src/interfaces/http/ — enthält Express-Routen und HTTP-Übersetzung'
   shared: []
   boundaries:
-    - 'TBD'
+    - 'Abhängigkeiten zeigen nach innen zur Domäne.'
+    - 'Express bleibt auf die HTTP-Schnittstellenschicht begrenzt.'
 ```
 
 ## Memory Bank (SDD Working Set)
